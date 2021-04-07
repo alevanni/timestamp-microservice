@@ -4,7 +4,7 @@
 // init project
 var express = require('express');
 var app = express();
-
+var runner = require('./test-runner');
 // enable CORS (https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 // so that your API is remotely testable by FCC 
 var cors = require('cors');
@@ -40,4 +40,20 @@ app.get("/api/timestamp/:date_string?", function(req, res){
 // listen for requests :)
 var listener = app.listen(process.env.PORT, function () {
   console.log('Your app is listening on port ' + listener.address().port);
+  
+  //start testing
+  if(process.env.NODE_ENV==='test') {
+    console.log('Running Tests...');
+    setTimeout(function () {
+      try {
+        runner.run();
+      } catch(e) {
+        var error = e;
+          console.log('Tests are not valid:');
+          console.log(error);
+      }
+    }, 1500);
+  }
 });
+
+module.exports = app; 
