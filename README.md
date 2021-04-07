@@ -12,6 +12,9 @@ The project can be found at: https://timestamp-microservice-for-fc.glitch.me/
 `{"unix": <date.getTime()>, "utc" : <date.toUTCString()> }`
 e.g. `{"unix": 1479663089000 ,"utc": "Sun, 20 Nov 2016 17:31:29 GMT"}`.
 5. If the date string is **invalid** the api returns a JSON having the structure `{"error": Invalid Date" }`.
+6. Automated test cases are in the file /test/functional-tests.js
+7. A very simple manual test case template is in the file /test/myTestCaseTemplate.ods
+8. Postman testcases and results are in the files /tests/GET Suite.postman_collection.json and /tests/GET Suite.postman_test_run.json
 
 #### Example usage:
 * https://curse-arrow.hyperdev.space/api/timestamp/2015-12-15
