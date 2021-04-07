@@ -2,6 +2,8 @@
 # API Project: Timestamp Microservice for FCC
 
 ### User stories :
+![My preview](https://lh3.googleusercontent.com/P8DJAEhMLsjmXdRJ5G6Bn4gEX0NUHuui9Uhwk6jMi1_NhVLDv52ZS0zKlr3KtssIjEa2oed_K2DWQQgw7TDMNjA8f8MJSdL95cEtl_PonA4X3HHiC2awRyBxR_-wjqcXakhYm4u71A=w2400)
+The project can be found at: https://timestamp-microservice-for-fc.glitch.me/
 
 1. The API endpoint is `GET [project_url]/api/timestamp/:date_string?`
 2. A date string is valid if can be successfully parsed by `new Date(date_string)` (JS) . Note that the unix timestamp needs to be an **integer** (not a string) specifying **milliseconds**. In our test we will use date strings compliant with ISO-8601 (e.g. `"2016-11-20"`) because this will ensure an UTC timestamp.
